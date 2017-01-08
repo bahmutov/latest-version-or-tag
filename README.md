@@ -38,6 +38,14 @@ latest()
   .catch(console.error)
 ```
 
+## Debug
+
+Run the module with environment variable
+
+```sh
+$ DEBUG=latest latest-version-or-tag
+```
+
 ### Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2017
