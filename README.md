@@ -8,6 +8,27 @@
 [![semantic-release][semantic-image] ][semantic-url]
 [![js-standard-style][standard-image]][standard-url]
 
+## Why
+
+If you use [semantic release](https://github.com/semantic-release/semantic-release)
+to publish your NPM modules (and you should!), then your `package.json`
+has a generic `0.0.0-semantic-release` or `0.0.0-development`. What is the
+actual latest version of the package?
+
+This little utility fetches it - uses either `package.json` version or
+the latest Git tag (according to [semver](http://semver.org/) comparison)
+
+The latest version is useful for exception reporting for example, especially
+used together with Git SHA.
+
+## Install and use
+
+```sh
+$ npm install latest-version-of-tag
+$ $(npm bin)/latest-version-of-tag
+latest version 1.2.0
+```
+
 ### Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2017
