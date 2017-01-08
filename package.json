@@ -31,6 +31,9 @@
     "src/*.js",
     "!src/*-spec.js"
   ],
+  "bin": {
+    "latest-version-or-tag": "./src/index.js"
+  },
   "homepage": "https://github.com/bahmutov/latest-version-or-tag#readme",
   "keywords": [
     "git",
