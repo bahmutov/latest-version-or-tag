@@ -24,20 +24,27 @@ used together with Git SHA.
 ## Install and use
 
 ```sh
-$ npm install latest-version-of-tag
-$ $(npm bin)/latest-version-of-tag
+$ npm install latest-version-or-tag
+$ $(npm bin)/latest-version-or-tag
 latest version 1.2.0
+```
+
+Or use it as a module
+
+```js
+const latest = require('latest-version-or-tag')
+latest()
+  .then(console.log)     // just version string
+  .catch(console.error)
 ```
 
 ### Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2017
 
-
 * [@bahmutov](https://twitter.com/bahmutov)
 * [glebbahmutov.com](http://glebbahmutov.com)
 * [blog](http://glebbahmutov.com/blog)
-
 
 License: MIT - do anything with the code, but don't blame me if it does not work.
 

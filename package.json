@@ -11,7 +11,7 @@
         "npm prune",
         "npm run deps",
         "npm test",
-        "node .",
+        "node bin/latest.js",
         "npm run ban"
       ],
       "pre-push": [
@@ -29,10 +29,11 @@
   },
   "files": [
     "src/*.js",
-    "!src/*-spec.js"
+    "!src/*-spec.js",
+    "bin"
   ],
   "bin": {
-    "latest-version-or-tag": "./src/index.js"
+    "latest-version-or-tag": "bin/latest.js"
   },
   "homepage": "https://github.com/bahmutov/latest-version-or-tag#readme",
   "keywords": [
@@ -57,7 +58,7 @@
     "deps": "deps-ok && dependency-check .",
     "issues": "git-issues",
     "license": "license-checker --production --onlyunknown --csv",
-    "lint": "standard --verbose --fix src/*.js",
+    "lint": "standard --verbose --fix src/*.js bin/*.js",
     "pretest": "npm run lint",
     "secure": "nsp check",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
